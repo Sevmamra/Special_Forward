@@ -1,11 +1,9 @@
 import os
 
 class Config:
-    # टेलीग्राम बॉट टोकन (BotFather से मिलेगा)
-    BOT_TOKEN = os.getenv("BOT_TOKEN")  
+    BOT_TOKEN = os.getenv("7763888885:AAGGtCSMRc0tvvGCFJwRMmYJBR819JfiOmQ")
+    ADMIN_ID = int(os.getenv("6567162029"))
+    GROUP_IDS = [int(gid.strip()) for gid in os.getenv("-1002501498159", "-1002665578655").split(",") if gid.strip()]
     
-    # एडमिन की टेलीग्राम यूजर आईडी (जैसे: 1234567890)
-    ADMIN_ID = int(os.getenv("ADMIN_ID"))  
-    
-    # ग्रुप आईडी (कॉमा सेपरेटेड, जैसे: -100xxx,-100yyy)
-    GROUP_IDS = [int(gid.strip()) for gid in os.getenv("GROUP_IDS", "").split(",") if gid.strip()]
+    # डेटाबेस के लिए (SQLite इस्तेमाल करेंगे)
+    DB_URL = "sqlite:///groups.db"  # यही फाइल database.py में इस्तेमाल होगी
